@@ -1,5 +1,6 @@
 
-makeMatric <- function(x = numeric()) {
+makeMatrix <- function(x = matrix()) {
+## Same as the original example except with use of a matrix and finding the inverse instead of the mean
     m <- NULL
     set <- function(y) {
         x <<- y
@@ -10,6 +11,7 @@ makeMatric <- function(x = numeric()) {
         m <<- inverse
     }    
     getinverse <- function(){
+        ## print('getinverse')
         m
     } 
     
@@ -18,7 +20,8 @@ makeMatric <- function(x = numeric()) {
          getinverse = getinverse)
 }
 
-## Return a matrix that is the inverse of 'x', check if it exist, if yes than get cache data.  If not, inverse the matrix and return it
+
+
 
 cacheInverse <- function(x, ...) {
     ## Return a matrix that is the inverse of 'x'
@@ -36,5 +39,5 @@ cacheInverse <- function(x, ...) {
     m<-solve(data)
     x$setinverse(m)
     m
-       
+    
 }
